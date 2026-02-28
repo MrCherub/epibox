@@ -1,38 +1,17 @@
-# VimTeX Examples: dangbox.sty & epibox.sty
+# epibox.sty
 
 <p align="center">
-<img width="465" height="234" alt="dangbox preview" src="https://github.com/user-attachments/assets/8b635c9b-6f39-434c-8b5c-e41d9a9f8012" />
+<img width="449" height="669" alt="epibox preview 1" src="https://github.com/user-attachments/assets/b767ae13-3c01-49fa-97e1-3c53cb05e75a" />
+<img width="449" height="673" alt="epibox preview 2" src="https://github.com/user-attachments/assets/0ab71fc3-cc1a-40eb-bbb1-3efe0de669d9" />
 </p>
 
-This repository contains LaTeX packages for styled boxes.
-
-**Disclaimer:** Some code is sourced from the internet and is not original work.
+LaTeX package for epistemic boxes for academic note-taking.
 
 ## Installation
 
-Place the `.sty` files in the same folder as your LaTeX file, or in your local TeX tree (`~/Library/texmf/tex/latex/`).
+Place `epibox.sty` in the same folder as your LaTeX file, or in your local TeX tree (`~/Library/texmf/tex/latex/`).
 
----
-
-## dangbox.sty
-
-A simple boxed environment with a gradient title bar.
-
-### Usage
-
-```latex
-\usepackage{dangbox}
-
-\begin{dang}[title=Example]
-Your content here
-\end{dang}
-```
-
----
-
-## epibox.sty
-
-Epistemic boxes for academic note-taking. Includes:
+## Environments
 
 - `known` - Known results (green)
 - `unclear` - Unclear points (orange)
@@ -41,7 +20,7 @@ Epistemic boxes for academic note-taking. Includes:
 - `pitfall` - Pitfalls to avoid (purple)
 - `epibox` - General notes (gray)
 
-### Usage
+## Usage
 
 ```latex
 \usepackage{epibox}
@@ -71,7 +50,7 @@ Epistemic boxes for academic note-taking. Includes:
 \end{epibox}
 ```
 
-### Lists
+## Lists
 
 Generate lists of all boxes:
 
