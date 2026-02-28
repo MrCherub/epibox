@@ -5,7 +5,46 @@
 <img width="449" height="673" alt="epibox preview 2" src="https://github.com/user-attachments/assets/0ab71fc3-cc1a-40eb-bbb1-3efe0de669d9" />
 </p>
 
-LaTeX package for epistemic boxes for academic note-taking.
+A LaTeX package for creating styled epistemic boxes in your documents. Perfect for academic note-taking, research journals, and organizing knowledge with color-coded boxes.
+
+## What is epibox?
+
+epibox provides a collection of environments for categorizing different types of information in your notes:
+
+- **known** - Established facts and proven results
+- **unclear** - Points that need clarification or further investigation
+- **question** - Open questions to be answered
+- **claim** - Assertions or propositions (with optional title)
+- **pitfall** - Common mistakes or traps to avoid
+- **epibox** - General notes and asides
+
+Each environment has a distinct color for easy visual identification.
+
+## Zettelkasten Support
+
+epibox works great with Zettelkasten-style note-taking. The optional argument allows you to add timestamps or IDs for linking notes:
+
+```latex
+\begin{question}[title=Question: 202602281530]
+    This question has a unique timestamp ID for Zettelkasten organization.
+\end{question}
+```
+
+This timestamp format (`YYYYMMDDHHMM`) can be automatically generated using a LuaSnip snippet in Neovim:
+
+```lua
+luasnip.add_snippets('tex', {
+    luasnip.snippet('qbox', {
+        luasnip.text_node { '\\begin{question}{' },
+        luasnip.function_node(os.date('%Y%m%d%H%M'), {}),
+        luasnip.text_node { '}', '\t' },
+        luasnip.insert_node(1, 'Type your question here...'),
+        luasnip.text_node { '', '\\end{question}' },
+    }),
+})
+```
+
+This enables unique identification of each box for cross-referencing and building a personal knowledge management system.
 
 ## Installation
 
